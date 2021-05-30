@@ -1,0 +1,288 @@
+$primary:#4e73df;
+$secondary:#858796;
+$success:#1cc88a;
+$info:#36b9cc;
+$warning:#f6c23e;
+$danger:#e74a3b;
+$light:#f8f9fc;
+$dark:#5a5c69;
+$default-text-color:#ccc;
+$sidebar:#242424;
+$background:#181818;
+$card:#262626;
+$card-header:#303030;
+$card-border:#202020;
+$table-border:#484848;
+
+body {
+	margin: 0;
+	color: $default-text-color;
+	background-color: $background;
+}
+
+.table {
+	margin-bottom: 0;
+	color: $default-text-color;
+
+	thead th {
+		border-color: $table-border;
+	}
+
+	td {
+		border-color: $table-border;
+	}
+}
+
+.table-bordered {
+	border-color: $table-border;
+
+	td, th {
+		border-color: $table-border;
+	}
+}
+
+.table-striped tbody tr:nth-of-type(2n+1) {
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chart-area {
+	height: 15rem;
+}
+
+@media (min-width: 768px) {
+	.chart-area {
+		height: 30rem;
+	}
+}
+
+.sidebar-toggle-wrapper {
+	bottom: 0;
+}
+
+.sidebar {
+	background-color: $sidebar;
+	transition: width 0.1s ease-in-out;
+
+	.navbar-brand {
+		font-size: 1.25rem;
+		font-weight: 600;
+		text-transform: none;
+		margin-right: 0;
+	}
+
+	&.collapsed {
+		width: 6.5rem !important;
+		min-height: 100vh;
+
+		.navbar-brand {
+			justify-content: center;
+		}
+
+		.nav-item .nav-link {
+			text-align: center;
+			padding: 0.75rem 1rem;
+			width: 6.5rem;
+
+			i {
+				font-size: initial;
+				margin-right: inherit;
+			}
+
+			span {
+				font-size: 0.65rem;
+				display: block;
+			}
+		}
+
+		.sidebar-brand-text {
+			display: none;
+		}
+
+		#sidebarToggle {
+			transform: rotateZ(180deg);
+		}
+	}
+
+	#sidebarToggle {
+		transition: transform 0.25s ease-in-out;
+	}
+}
+
+.sidebar-brand-text {
+	margin: 0 1rem;
+	padding-bottom: 5px;
+}
+
+.content-wrapper {
+	width: 100%;
+}
+
+.no-style-button {
+	border-radius: 0;
+	outline: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:active, &:focus {
+		outline: none !important;
+		text-decoration: none;
+	}
+}
+
+.navbar-nav {
+	display: flex;
+	flex-direction: column;
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+}
+
+.img-profile {
+	height: 2rem;
+	width: 2rem;
+}
+
+.card {
+	background-color: $card;
+	border-color: $card-border;
+}
+
+.row .card {
+	margin-bottom: 1.5rem;
+}
+
+.card-header {
+	background-color: $card-header;
+	border-color: $card-border;
+}
+
+hr {
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu {
+	background-color: #1D1D1D;
+	border-color: $table-border;
+}
+
+.dropdown-divider {
+	border-color: $table-border;
+}
+
+.dropdown-item {
+	color: $default-text-color;
+
+	&:hover {
+		background-color: $sidebar;
+		color: $default-text-color;
+	}
+}
+
+.list-group-item {
+	background-color: $card;
+	border-color: rgba(255, 255, 255, 0.125);
+	color: $default-text-color;
+}
+
+.list-group-item-action {
+	&:hover, &:focus, &:active {
+		background-color: #303030;
+		color: $default-text-color;
+	}
+}
+
+.w-inherit {
+	width: inherit !important;
+}
+
+.form-control {
+	background-color: $card;
+	border-color: $table-border;
+	color: $default-text-color;
+
+	&:focus {
+		background-color: #303030;
+		border-color: #484848;
+		color: $default-text-color;
+	}
+
+	&:disabled {
+		background-color: #1c1c1c;
+		color: #888;
+	}
+
+}
+
+a.clickable {
+	cursor: pointer;
+}
+
+.modal-content {
+	background-color: #202020;
+}
+
+.modal-header {
+	background-color: #262626;
+	align-items: center;
+
+	.close {
+		padding: 0;
+		margin: -0.2rem 0 0 0;
+		color: $default-text-color;
+		text-shadow: none;
+	}
+}
+
+.modal .react-datepicker {
+	width: 330px;
+}
+
+.react-datepicker__close-icon {
+	margin-top: 0px;
+
+	&::after {
+		background-color: unset;
+		font-family: 'Font Awesome 5 Free';
+		content: '\f057';
+	}
+}
+
+.popover {
+	background-color: #212121;
+	border: 1px solid #666;
+
+	.arrow::after {
+	border-top-color: #666;
+	}
+}
+
+.popover-header {
+	background-color: #2A2A2A;
+	border-color: #666;
+}
+
+.popover-body {
+	color: $default-text-color;
+}
+
+.cursor-pointer {
+	cursor: pointer !important;
+}
+
+.input-group-text {
+	background-color: $table-border;
+	border-color: $table-border;
+	color: $default-text-color;
+}
+
+.input-group.has-validation > .custom-select:not(:last-child), .input-group.has-validation > .form-control:not(:last-child) {
+    border-top-right-radius: .35rem;
+    border-bottom-right-radius: .35rem;
+}
+
+.shrink-column {
+    width: 1px !important;
+    white-space: nowrap;
+}

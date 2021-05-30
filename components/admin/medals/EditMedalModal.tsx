@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Col, Form, Modal, Image } from 'react-bootstrap';
+import { Button, Col, Form, Modal } from 'react-bootstrap';
 import { Medal } from '../../../pages/admin/medals';
 import { toast } from 'react-toastify';
 import Image from 'next/image';
